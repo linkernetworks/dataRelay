@@ -1,4 +1,4 @@
-dataRelay: A data relay from Kafka to target address
+dataRelay: A data relay from Kafka to target server
 
 
 Cassandra version (1.x, 2.x only, not capatible with 3.x)
