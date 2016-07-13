@@ -1,49 +1,5 @@
 package main
 
-// sender := sendr.NewSender("dataRelay")
-// sender.SendData("cassandra", "127.0.0.1", "dap", "k2", "v2")
-
-// 	cluster := gocql.NewCluster("127.0.0.1")
-// 	cluster.Keyspace = "dap"
-// 	cluster.Consistency = gocql.Quorum
-// 	session, err := cluster.CreateSession()
-// 	if err != nil {
-// 		log.Fatal("fail:", err)
-// 	}
-// 	defer session.Close()
-
-// 	var key, value string
-
-// 	// if err := session.Query(`INSERT INTO test_topic (key, value) VALUES (?, ?)`, "key1", "v1").Exec(); err != nil {
-// 	// 	log.Fatal(err)
-// 	// }
-// 	iter2 := session.Query("SELECT key,value  FROM test_topic").Iter()
-// 	for iter2.Scan(&key, &value) {
-// 		fmt.Println("kafka:", key, value)
-// 	}
-// 	if err := iter2.Close(); err != nil {
-// 		log.Fatal(err)
-// 	}
-
-// 	var city string
-// 	var age int
-// 	/* Search for a specific set of records whose 'timeline' column matches
-// 	 * the value 'me'. The secondary index that we created earlier will be
-// 	 * used for optimizing the search */
-// 	if err := session.Query("SELECT city, age FROM users").Consistency(gocql.One).Scan(&city, &age); err != nil {
-// 		log.Fatal(err)
-// 	}
-// 	fmt.Println("Tweet:", city, age)
-
-// 	iter := session.Query("SELECT city, age  FROM users").Iter()
-// 	for iter.Scan(&city, &age) {
-// 		fmt.Println("Tweet:", city, age)
-// 	}
-// 	if err := iter.Close(); err != nil {
-// 		log.Fatal(err)
-// 	}
-// }
-
 import (
 	"bufio"
 	"io"
@@ -63,7 +19,6 @@ var (
 
 func main() {
 	send = sendr.NewSender("dataRelay")
-	// sender.SendData("cassandra", "127.0.0.1", "dap", "k2", "v2")
 
 	var targetAddr, serverAddr, topic, dest string
 	var usingPipe bool
