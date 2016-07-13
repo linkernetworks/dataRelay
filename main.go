@@ -107,7 +107,7 @@ func main() {
 					fmt.Printf("Key:    %s\n", string(msg.Key))
 					fmt.Printf("Value:  %s\n", string(msg.Value))
 					fmt.Println()
-					send.SendData(sendr.SendDataParam{Dest: dest, SerAddr: targetAddr, Topic: "dap", Key: string(msg.Key), Value: string(msg.Value), Table: "test_topic"})
+					send.SendData(sendr.SendDataParam{Dest: dest, SerAddr: targetAddr, Topic: "dap", Key: string(msg.Key), Value: string(msg.Value), Table: "raw_record"})
 				}
 
 				if err := c.Close(); err != nil {
