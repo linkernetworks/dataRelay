@@ -46,7 +46,6 @@ package main
 
 import (
 	"bufio"
-	"fmt"
 	"io"
 	"log"
 	"os"
@@ -103,15 +102,12 @@ func main() {
 
 			for {
 				for msg := range pc.Messages() {
-					fmt.Printf("Offset: %d\n", msg.Offset)
-					fmt.Printf("Key:    %s\n", string(msg.Key))
-					fmt.Printf("Value:  %s\n", string(msg.Value))
-					fmt.Println()
+					log.Printf("Offset: %d data entry \n", msg.Offset)
 					send.SendData(sendr.SendDataParam{Dest: dest, SerAddr: targetAddr, Topic: "dap", Key: string(msg.Key), Value: string(msg.Value), Table: "raw_record"})
 				}
 
 				if err := c.Close(); err != nil {
-					fmt.Println("Failed to close consumer: ", err)
+					log.Println("Failed to close consumer: ", err)
 				}
 			}
 		},
