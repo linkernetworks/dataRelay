@@ -1,5 +1,9 @@
 dataRelay: A data relay from Kafka to target server
 
+[![Build Status](https://travis-ci.org/LinkerNetworks/dataRelay.svg)](https://travis-ci.org/LinkerNetworks/dataRelay)
+
+[![](https://goreportcard.com/badge/github.com/LinkerNetworks/dataRelay)](https://goreportcard.com/report/github.com/LinkerNetworks/dataRelay)
+
 
 Cassandra version (1.x, 2.x only, not capatible with 3.x)
 
